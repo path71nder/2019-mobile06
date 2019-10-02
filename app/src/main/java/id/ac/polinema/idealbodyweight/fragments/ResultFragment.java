@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import id.ac.polinema.idealbodyweight.R;
@@ -40,6 +41,13 @@ public class ResultFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_result, container, false);
         TextView informationText = view.findViewById(R.id.text_information);
         informationText.setText(information);
+        Button tryAgainButton = view.findViewById(R.id.button_try_again);
+        tryAgainButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         return view;
     }
 
