@@ -14,23 +14,25 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="320dp"
+            android:layout_width="334dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="256dp"
+            android:layout_marginEnd="16dp"
             android:text="This program created by"
+            android:textAlignment="center"
             android:textColor="@android:color/background_dark"
             android:textSize="30sp"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="128dp"
-            android:layout_marginBottom="252dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginBottom="312dp"
             android:text="Your Name"
+            android:textAlignment="center"
             android:textColor="@android:color/background_dark"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -41,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="397dp" />
+            app:layout_constraintGuide_begin="365dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
