@@ -45,7 +45,9 @@ public class ResultFragment extends Fragment {
         tryAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (mListener != null){
+                    mListener.onTryAgainButtonClicked("BrocaIndex");
+                }
             }
         });
         return view;
