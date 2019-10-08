@@ -24,7 +24,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="328dp"
-        android:layout_marginBottom="512dp"
+        android:layout_marginBottom="433dp"
         android:text="Weight"
         android:textSize="18sp" />
 
@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="331dp"
-        android:layout_marginBottom="417dp"
+        android:layout_marginEnd="330dp"
+        android:layout_marginBottom="386dp"
         android:text="Height"
         android:textSize="18sp" />
 
@@ -46,7 +46,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="95dp"
-        android:layout_marginBottom="406dp"
+        android:layout_marginBottom="375dp"
         android:ems="10"
         android:inputType="number" />
 
@@ -66,9 +66,49 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="498dp"
+        android:layout_marginEnd="93dp"
+        android:layout_marginBottom="427dp"
         android:ems="10"
         android:inputType="number" />
+
+    <RadioGroup
+        android:layout_width="274dp"
+        android:layout_height="78dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="494dp">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="138dp"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="427dp" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="0dp"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="1158dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="326dp"
+        android:layout_marginBottom="527dp"
+        android:text="Gender"
+        android:textSize="18sp" />
 
 </RelativeLayout>
