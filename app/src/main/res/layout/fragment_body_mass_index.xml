@@ -18,39 +18,15 @@
         android:textSize="30sp" />
 
     <TextView
-        android:id="@+id/text_gender"
+        android:id="@+id/text_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="328dp"
         android:layout_marginBottom="512dp"
-        android:text="Gender"
+        android:text="Weight"
         android:textSize="18sp" />
-
-    <RadioGroup
-        android:layout_width="214dp"
-        android:layout_height="76dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="93dp"
-        android:layout_marginBottom="478dp">
-
-        <RadioButton
-            android:id="@+id/radio_male"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Male" />
-
-        <RadioButton
-            android:id="@+id/radio_female"
-            android:layout_width="291dp"
-            android:layout_height="42dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="502dp"
-            android:text="female" />
-
-    </RadioGroup>
 
     <TextView
         android:id="@+id/text_height"
@@ -72,7 +48,7 @@
         android:layout_marginEnd="95dp"
         android:layout_marginBottom="406dp"
         android:ems="10"
-        android:inputType="textPersonName" />
+        android:inputType="number" />
 
     <Button
         android:id="@+id/button_calculate"
@@ -83,5 +59,16 @@
         android:layout_marginEnd="106dp"
         android:layout_marginBottom="320dp"
         android:text="Calculate" />
+
+    <EditText
+        android:id="@+id/id_mass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="498dp"
+        android:ems="10"
+        android:inputType="number" />
 
 </RelativeLayout>

@@ -4,21 +4,31 @@ public class BodyMassIndex {
     public static final int MALE = 0;
     public static final int FEMALE = 1;
 
-    private int gender;
-    private int height;
+    private float mass;
+    private float height;
     private float index;
 
-    public BodyMassIndex(int gender, int height) {
-        this.gender = gender;
+    public BodyMassIndex(float mass, float height) {
+        this.mass = mass;
         this.height = height;
-        this.index = calculate();
+        this.calculate();
     }
 
-    private float calculate() {
-        switch (gender){
-            case MALE: return (height - 100) - ((height - 100) * 0.1f);
-            case FEMALE: return (height - 100) + ((height - 100) * 0.15f);
-            default:return 0f;
+    public String BMIRange(){
+        String res = "";
+        if (this.index < 18.50){
+            res = "Underweight";
         }
+        else if (this.index >= 18.50 && this.index <= 24.99){
+            res = "Healthy weight";
+        }
+        else {
+            res = "Overweight";
+        }
+        return res;
+    }
+
+    private void calculate() {
+        this.index = this.mass / (this.height * this.height);
     }
 }
