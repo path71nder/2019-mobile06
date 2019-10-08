@@ -9,17 +9,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import id.ac.polinema.idealbodyweight.fragments.AboutFragment;
+import id.ac.polinema.idealbodyweight.fragments.BodyMassIndexFragment;
 import id.ac.polinema.idealbodyweight.fragments.BrocaIndexFragment;
 import id.ac.polinema.idealbodyweight.fragments.MenuFragment;
 import id.ac.polinema.idealbodyweight.fragments.ResultFragment;
 
-public class MainActivity extends AppCompatActivity implements MenuFragment.OnFragmentInteractionListener, BrocaIndexFragment.OnFragmentInteractionListener, ResultFragment.OnFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements MenuFragment.OnFragmentInteractionListener, BrocaIndexFragment.OnFragmentInteractionListener, ResultFragment.OnFragmentInteractionListener, BodyMassIndexFragment.OnFragmentInteractionListener {
 
 	// Deklarasikan atribut Fragment di sini
 	private AboutFragment aboutFragment;
 	MenuFragment menuFragment;
 	private BrocaIndexFragment brocaIndexFragment;
 	private ResultFragment resultFragment;
+	private BodyMassIndexFragment bodyMassIndexFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnFr
 		menuFragment = new MenuFragment();
 		brocaIndexFragment = new BrocaIndexFragment();
 		resultFragment = new ResultFragment();
+		bodyMassIndexFragment = new BodyMassIndexFragment();
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.fragment_container, menuFragment)
+				.commit();
 	}
 
 	@Override
@@ -81,11 +87,28 @@ public class MainActivity extends AppCompatActivity implements MenuFragment.OnFr
 
 	@Override
 	public void onBodyMassIndexButtonClicked() {
-
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.fragment_container, bodyMassIndexFragment)
+				.addToBackStack(null)
+				.commit();
 	}
 
 	@Override
 	public void onPointerCaptureChanged(boolean hasCapture) {
 
+	}
+
+	@Override
+	public void onFragmentInteraction(float index) {
+
+	}
+
+	@Override
+	public void onCalculateBMIClicked(String bmiRange) {
+		resultFragment.setInformation(String.format("Your healthy BMI range is" + bmiRange));
+		getSupportFragmentManager().beginTransaction()
+				.replace(R.id.fragment_container, brocaIndexFragment)
+				.replace(R.id.fragment_container, resultFragment, "BMI")
+				.commit();
 	}
 }
